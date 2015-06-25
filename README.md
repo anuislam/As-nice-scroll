@@ -9,3 +9,10 @@ After installing and Activating the plugin, go to WordPress Admin Dahsbord and t
 Appearance > As option
 ```
 Here you can customize default settings. So customize settings as you choice and see a nice scrollbar at you site front-end.
+
+## Installation
+
+1. Upload ‘as-nicescroll ‘ folder to the ‘/wp-content/plugins/’ directory or Install as a regullar WordPress plugin
+2. You will see a scrollbar right site when you are scrolling.
+ 
+### All credit goes to nicescroll
