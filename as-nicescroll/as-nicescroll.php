@@ -82,7 +82,7 @@ function as_ncescroll_js_active() {
 		$("html").niceScroll({
 			cursorcolor:		"<?php echo (!empty($cursorcolor)) ? $cursorcolor : '#ff0000'; ?>",
 			cursorwidth: 		"<?php echo (!empty($cursorwidth)) ? $cursorwidth : '5'; ?>px",
-			cursorborder: 		"<?php echo (!empty($cursorborderwidth)) ? $cursorborderwidth : '1'; ?>px <?php echo (!empty($cursorborderstyle)) ? $cursorborderstyle : 'solid'; ?> <?php echo (!empty($cursorbordercolor)) ? $cursorbordercolor : '#000'; ?>",
+			cursorborder: 		"<?php echo (!empty($cursorborderwidth)) ? $cursorborderwidth : '0'; ?>px <?php echo (!empty($cursorborderstyle)) ? $cursorborderstyle : 'solid'; ?> <?php echo (!empty($cursorbordercolor)) ? $cursorbordercolor : '#000'; ?>",
 			scrollspeed: 		<?php echo (!empty($scrollspeed)) ? $scrollspeed : '60'; ?>,
 			autohidemode: 		<?php echo (!empty($autohidemode)) ? $autohidemode : 'true'; ?>,
 			background: 		'<?php echo (!empty($background)) ? $background : '#ddd'; ?>',
@@ -104,6 +104,7 @@ function as_ncescroll_js_active() {
     }
 add_action( 'wp_footer', 'as_ncescroll_js_active' );
  // nice scroll admin option
- require_once( '/settings/as_scroll_option.php' );
+ define( 'as_nice_scroll_path', plugin_dir_path( __FILE__ ) );
+ require_once( as_nice_scroll_path . '/settings/as_scroll_option.php' );
  
  

@@ -41,7 +41,7 @@ function as_nicescroll_display_function(){
 function as_nicescroll_display_option(){
 	
 	$as_color = (array)get_option('as_op_save');
-	$color = $as_color['as_nice_cursorcolor'];
+	$color = (isset($as_color['as_nice_cursorcolor'])) ? $as_color['as_nice_cursorcolor'] : '';
 	
 	echo '<input name="as_op_save[as_nice_cursorcolor]" type="text" value="'.$color.'" class="regular-text as_color_option">';
 }
@@ -49,7 +49,7 @@ function as_nicescroll_display_option(){
 
 function as_nice_cursorwidth_display_option(){
 	$as_width = (array)get_option('as_op_save');
-	$width = $as_width['as_nice_cursorwidth'];
+	$width = (isset($as_width['as_nice_cursorwidth']))? $as_width['as_nice_cursorwidth'] : '' ;
 	echo '<input name="as_op_save[as_nice_cursorwidth]" type="number" value="'.$width.'" class="regular-text">';
 	echo '<p>Number == px</p>';
 }
@@ -57,13 +57,13 @@ function as_nice_cursorwidth_display_option(){
 
 function as_nice_cursorborder_width(){
 	$as_border_width = (array)get_option('as_op_save');
-	$border_width = $as_border_width['as_nice_border_width'];
+	$border_width = (isset($as_border_width['as_nice_border_width'])) ? $as_border_width['as_nice_border_width'] : '';
 	echo '<input name="as_op_save[as_nice_border_width]" type="number" value="'.$border_width.'" class="regular-text">';
 	echo '<p>Number == px</p>';	
 }
 function as_nice_cursorborder_style(){
 	$as_border_style = (array)get_option('as_op_save');
-	$border_style = $as_border_style['as_nice_border_style'];
+	$border_style = (isset($as_border_style['as_nice_border_style'])) ? $as_border_style['as_nice_border_style'] : '';
 	?>
 	
 	<select name="as_op_save[as_nice_border_style]" class="regular-text" >
@@ -87,14 +87,14 @@ function as_nice_cursorborder_style(){
 }
 function as_nice_cursorborder_color(){
 	$as_border_color = (array)get_option('as_op_save');
-	$border_color = $as_border_color['as_nice_border_color'];
+	$border_color = (isset($as_border_color['as_nice_border_color'])) ? $as_border_color['as_nice_border_color'] : '';
 	
 	echo '<input name="as_op_save[as_nice_border_color]" type="text" value="'.$border_color.'" class="regular-text as_color_option">';
 }
 
 function as_nice_scrollspeed(){
 	$as_scroll_speed = (array)get_option('as_op_save');
-	$scroll_speed = $as_scroll_speed['as_nice_scroll_speed'];
+	$scroll_speed = (isset($as_scroll_speed['as_nice_scroll_speed'])) ? $as_scroll_speed['as_nice_scroll_speed'] : '';
 	
 	echo '<input name="as_op_save[as_nice_scroll_speed]" type="number" value="'.$scroll_speed.'" class="regular-text">';
 	echo '<p>Default 60</p>';
@@ -102,7 +102,7 @@ function as_nice_scrollspeed(){
 
 function as_nice_autohide_mode(){
 	$as_autohide = (array)get_option('as_op_save');
-	$autohide = $as_autohide['as_nice_autohide_mode'];
+	$autohide = (isset($as_autohide['as_nice_autohide_mode'])) ? $as_autohide['as_nice_autohide_mode'] : '';
 	
 ?>
 
@@ -118,21 +118,21 @@ function as_nice_autohide_mode(){
 
 function as_nice_background(){
 	$as_background = (array)get_option('as_op_save');
-	$background = $as_background['as_nice_background'];
+	$background = (isset($as_background['as_nice_background'])) ? $as_background['as_nice_background'] : '';
 	
 	echo '<input name="as_op_save[as_nice_background]" type="text" value="'.$background.'" class="regular-text as_color_option">';
 }
 
 function as_nice_hidecursordelay(){
 	$as_hidecursordelay = (array)get_option('as_op_save');
-	$hidecursordelay = $as_hidecursordelay['as_nice_hidecursordelay'];
+	$hidecursordelay = (isset($as_hidecursordelay['as_nice_hidecursordelay'])) ? $as_hidecursordelay['as_nice_hidecursordelay'] : '';
 	
 	echo '<input name="as_op_save[as_nice_hidecursordelay]" type="number" value="'.$hidecursordelay.'" class="regular-text">';
 	echo '<p>Default 400</p>';
 }
 function as_nice_cursorfixedheight(){
 	$as_cursorfixedheight = (array)get_option('as_op_save');
-	$cursorfixedheight = $as_cursorfixedheight['as_nice_cursorfixedheight'];
+	$cursorfixedheight = (isset($as_cursorfixedheight['as_nice_cursorfixedheight'])) ? $as_cursorfixedheight['as_nice_cursorfixedheight'] : '';
 	
 ?>
 
@@ -147,7 +147,7 @@ function as_nice_cursorfixedheight(){
 
 function as_nice_cursorminheight(){
 	$as_cursorminheight = (array)get_option('as_op_save');
-	$cursorminheight = $as_cursorminheight['as_nice_cursorminheight'];
+	$cursorminheight = (isset($as_cursorminheight['as_nice_cursorminheight'])) ? $as_cursorminheight['as_nice_cursorminheight'] : '';
 	
 	echo '<input name="as_op_save[as_nice_cursorminheight]" type="number" value="'.$cursorminheight.'" class="regular-text">';
 	echo '<p>Default 20</p>';
@@ -155,7 +155,7 @@ function as_nice_cursorminheight(){
 
 function as_nice_enablekeyboard(){
 	$as_enablekeyboard = (array)get_option('as_op_save');
-	$enablekeyboard = $as_enablekeyboard['as_nice_enablekeyboard'];
+	$enablekeyboard = (isset($as_enablekeyboard['as_nice_enablekeyboard'])) ? $as_enablekeyboard['as_nice_enablekeyboard'] : '';
 	?>
 <select name="as_op_save[as_nice_enablekeyboard]" class="regular-text">
 	<option value="" <?php echo (empty($enablekeyboard)) ? 'selected' : '' ;?> >Select a value</option>
@@ -167,7 +167,7 @@ function as_nice_enablekeyboard(){
 }
 function as_nice_horizrailenabled(){
 	$as_horizrailenabled = (array)get_option('as_op_save');
-	$horizrailenabled = $as_horizrailenabled['as_nice_horizrailenabled'];
+	$horizrailenabled = (isset($as_horizrailenabled['as_nice_horizrailenabled'])) ? $as_horizrailenabled['as_nice_horizrailenabled'] : '';
 	?>
 <select name="as_op_save[as_nice_horizrailenabled]" class="regular-text">
 	<option value="" <?php echo (empty($horizrailenabled)) ? 'selected' : '' ;?> >Select a value</option>
@@ -179,7 +179,7 @@ function as_nice_horizrailenabled(){
 }
 function as_nice_bouncescroll(){
 	$as_bouncescroll = (array)get_option('as_op_save');
-	$bouncescroll = $as_bouncescroll['as_nice_bouncescroll'];
+	$bouncescroll = (isset($as_bouncescroll['as_nice_bouncescroll'])) ? $as_bouncescroll['as_nice_bouncescroll'] : '';
 	?>
 <select name="as_op_save[as_nice_bouncescroll]" class="regular-text">
 	<option value="" <?php echo (empty($bouncescroll)) ? 'selected' : '' ;?> >Select a value</option>
@@ -191,7 +191,7 @@ function as_nice_bouncescroll(){
 }
 function as_nice_smoothscroll(){
 	$as_smoothscroll = (array)get_option('as_op_save');
-	$smoothscroll = $as_smoothscroll['as_nice_smoothscroll'];
+	$smoothscroll = (isset($as_smoothscroll['as_nice_smoothscroll'])) ? $as_smoothscroll['as_nice_smoothscroll'] : '';
 	?>
 <select name="as_op_save[as_nice_smoothscroll]" class="regular-text">
 	<option value="" <?php echo (empty($smoothscroll)) ? 'selected' : '' ;?> >Select a value</option>
@@ -203,7 +203,7 @@ function as_nice_smoothscroll(){
 }
 function as_nice_iframeautoresize(){
 	$as_iframeautoresize = (array)get_option('as_op_save');
-	$iframeautoresize = $as_iframeautoresize['as_nice_iframeautoresize'];
+	$iframeautoresize = (isset($as_iframeautoresize['as_nice_iframeautoresize'])) ? $as_iframeautoresize['as_nice_iframeautoresize'] : '';
 	?>
 <select name="as_op_save[as_nice_iframeautoresize]" class="regular-text">
 	<option value="" <?php echo (empty($iframeautoresize)) ? 'selected' : '' ;?> >Select a value</option>
@@ -215,7 +215,7 @@ function as_nice_iframeautoresize(){
 }
 function as_nice_touchbehavior(){
 	$as_touchbehavior = (array)get_option('as_op_save');
-	$touchbehavior = $as_touchbehavior['as_nice_touchbehavior'];
+	$touchbehavior = (isset($as_touchbehavior['as_nice_touchbehavior'])) ? $as_touchbehavior['as_nice_touchbehavior'] : '';
 	?>
 <select name="as_op_save[as_nice_touchbehavior]" class="regular-text">
 	<option value="" <?php echo (empty($touchbehavior)) ? 'selected' : '' ;?> >Select a value</option>
