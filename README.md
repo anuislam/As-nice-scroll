@@ -16,3 +16,9 @@ Here you can customize default settings. So customize settings as you choice and
 2. You will see a scrollbar right site when you are scrolling.
  
 ### All credit goes to nicescroll
+
+##Download
+
+```
+you can download here : https://wordpress.org/plugins/as-nice-scroll/
+```
