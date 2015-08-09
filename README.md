@@ -28,3 +28,13 @@ you can download here : https://wordpress.org/plugins/as-nice-scroll/
 ```
 you can see demo : http://as-nicescroll.tk/
 ```
+
+##Changelog
+
+= 1.2 =
+*Release Date - 9th August, 2015*
+*Include some html, css.
+
+= 1.0 =
+* Initial Release
+
