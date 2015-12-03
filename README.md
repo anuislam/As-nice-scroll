@@ -37,4 +37,5 @@ you can see demo : http://as-nicescroll.tk/
 
 = 1.0 =
 * Initial Release
+*
 
