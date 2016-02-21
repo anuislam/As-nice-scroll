@@ -1,7 +1,7 @@
 <?php
 /**
  * @package as-nicescroll
- * @version 1.2
+ * @version 1.3
  * @licence GPLv2
  */
 
@@ -10,8 +10,8 @@ Plugin Name: AS nice scroll
 Plugin URI: https://wordpress.org/plugins/as-nice-scroll/
 Description: This is simple wordpress plugin.
 Author: Anu Islam
-Version: 1.2
-Author URI: http://asfoundation.tk/
+Version: 1.3
+Author URI: http://anuislamshohag.tk
 */
 
 /*  Copyright 2015  anuislam  (email : anuislams@gmail.com)
@@ -56,24 +56,24 @@ wp_enqueue_style( 'as_admin_css', plugins_url( 'css/as-admin-css.css', __FILE__ 
 add_action('admin_enqueue_scripts','as_admin_color_picker_option');
 //nice scrol avtive
 function as_ncescroll_js_active() {
-	$as_option	= get_option('as_op_save');
-	$cursorcolor = $as_option['as_nice_cursorcolor'];
-	$cursorwidth = $as_option['as_nice_cursorwidth'];
-	$cursorborderwidth = $as_option['as_nice_border_width'];
-	$cursorborderstyle = $as_option['as_nice_border_style'];
-	$cursorbordercolor = $as_option['as_nice_border_color'];
-	$scrollspeed = $as_option['as_nice_scroll_speed'];
-	$autohidemode = $as_option['as_nice_autohide_mode'];
-	$background = $as_option['as_nice_background'];
-	$hidecursordelay = $as_option['as_nice_hidecursordelay'];
-	$cursorfixedheight = $as_option['as_nice_cursorfixedheight'];
-	$cursorminheight = $as_option['as_nice_cursorminheight'];
-	$enablekeyboard = $as_option['as_nice_enablekeyboard'];
-	$horizrailenabled = $as_option['as_nice_horizrailenabled'];
-	$bouncescroll = $as_option['as_nice_bouncescroll'];
-	$smoothscroll = $as_option['as_nice_smoothscroll'];
-	$iframeautoresize = $as_option['as_nice_iframeautoresize'];
-	$touchbehavior = $as_option['as_nice_touchbehavior'];
+	@$as_option	= get_option('as_op_save');
+	@$cursorcolor = $as_option['as_nice_cursorcolor'];
+	@$cursorwidth = $as_option['as_nice_cursorwidth'];
+	@$cursorborderwidth = $as_option['as_nice_border_width'];
+	@$cursorborderstyle = $as_option['as_nice_border_style'];
+	@$cursorbordercolor = $as_option['as_nice_border_color'];
+	@$scrollspeed = $as_option['as_nice_scroll_speed'];
+	@$autohidemode = $as_option['as_nice_autohide_mode'];
+	@$background = $as_option['as_nice_background'];
+	@$hidecursordelay = $as_option['as_nice_hidecursordelay'];
+	@$cursorfixedheight = $as_option['as_nice_cursorfixedheight'];
+	@$cursorminheight = $as_option['as_nice_cursorminheight'];
+	@$enablekeyboard = $as_option['as_nice_enablekeyboard'];
+	@$horizrailenabled = $as_option['as_nice_horizrailenabled'];
+	@$bouncescroll = $as_option['as_nice_bouncescroll'];
+	@$smoothscroll = $as_option['as_nice_smoothscroll'];
+	@$iframeautoresize = $as_option['as_nice_iframeautoresize'];
+	@$touchbehavior = $as_option['as_nice_touchbehavior'];
 
 	?>
 <script type="text/javascript">
